@@ -14,8 +14,8 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
             estaciones= new List<Estaciones>()
             {
                 new Estaciones{id=1, nombre="Marly", direccion="Calle 57 #97a 20", coord_x=43, coord_y=89, Tipo="1"},
-                new Estaciones{id=1, nombre="Bosa laurel", direccion="Calle 89 #97a 20", coord_x=93, coord_y=99, Tipo="3"},
-                new Estaciones{id=1, nombre="Engativa", direccion="Calle 87 #97a 20", coord_x=23, coord_y=69, Tipo="1"}
+                new Estaciones{id=2, nombre="Bosa laurel", direccion="Calle 89 #97a 20", coord_x=93, coord_y=99, Tipo="3"},
+                new Estaciones{id=3, nombre="Engativa", direccion="Calle 87 #97a 20", coord_x=23, coord_y=69, Tipo="1"}
  
             };
         }
@@ -40,6 +40,16 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
             }
         return estacion;
         }
+
+
+         public Estaciones Delete(int id)
+        {
+        var estacion= estaciones.SingleOrDefault(b => b.id == id);
+        estaciones.Remove(estacion);
+        return estacion;
+        }
+
+
     }
    
 

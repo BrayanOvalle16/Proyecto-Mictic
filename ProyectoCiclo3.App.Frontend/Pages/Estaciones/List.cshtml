@@ -1,34 +1,33 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.ListEstacionesModel
 @{
 }
- 
+ <h1>Listado de Estaciones</h1>
 <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>Twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>Facebook</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry the Bird</td>
-      <td>Arias</td>
-      <td>Instagram</td>
-    </tr>
-  </tbody>
+  <td>Id</td>
+  <td>Nombre</td>
+  <td>Direccion</td>
+  <td>Coordenada X</td>
+  <td>Coordenada Y</td>
+  <td>Tipo</td>
+  <td>Opciones de cambio</td>
+  @foreach (var Estaciones in Model.Estaciones)
+    {
+        <tr>
+            <td>@Estaciones.id</td>
+            <td>@Estaciones.nombre</td>
+            <td>@Estaciones.direccion</td>
+            <td>@Estaciones.coord_x</td>
+            <td>@Estaciones.coord_y</td>
+            <td>@Estaciones.Tipo</td>
+            <td>
+              <a class="btn btn-info" asp-page="./Details" asp-route-estacionId="@Estaciones.id"><i class="fas fa-adjust"></i>Ver</a>
+                        <a class="btn btn-info" asp-page="./Edit" asp-route-estacionId="@Estaciones.id">Editar</a>
+                     <form method="POST">
+            <input type="number" class="form-control d-none" id="id" name="id" placeholder="id" asp-for="@Estaciones.id">
+              <button type="submit"class="btn btn-danger" href="">Eliminar</button>
+            </form>
+              </td>
+        </tr>
+    }
 </table>

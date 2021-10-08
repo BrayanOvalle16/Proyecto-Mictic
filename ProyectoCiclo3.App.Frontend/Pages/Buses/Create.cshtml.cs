@@ -9,20 +9,31 @@ using ProyectoCiclo3.App.Dominio;
  
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
-    public class CreateBusModel : PageModel
+    public class FormBusModel : PageModel
     {
-       
+ 
         private readonly RepositorioBuses repositorioBuses;
-                public IEnumerable<Buses> Buses {get;set;}
+        [BindProperty]
+        public Buses Bus {get;set;}
  
-    public CreateBusModel(RepositorioBuses repositorioBuses)
-    {
-        this.repositorioBuses=repositorioBuses;
-     }
+        public FormBusModel(RepositorioBuses repositorioBuses)
+       {
+            this.repositorioBuses=repositorioBuses;
+       }
  
-    public void OnGet()
-    {
-        Buses=repositorioBuses.GetAll();
-    }
+        public void OnGet()
+        {
+ 
+        }
+ 
+        public IActionResult OnPost()
+        {
+            if(!ModelState.IsValid)
+            {
+                return Page();
+            }            
+            Bus = repositorioBuses.Create(Bus);            
+            return RedirectToPage("./List");
+        }
     }
 }

@@ -87,3 +87,7 @@ C:\Users\braya\OneDrive\Escritorio\ProyectoCiclo3.App\ProyectoCiclo3.App.Fronten
 C:\Users\braya\OneDrive\Escritorio\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontend\bin\Debug\netcoreapp3.1\ProyectoCiclo3.App.Dominio.pdb
 C:\Users\braya\OneDrive\Escritorio\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Buses\Details.cshtml.g.cs
 C:\Users\braya\OneDrive\Escritorio\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Buses\Edit.cshtml.g.cs
+C:\Users\braya\OneDrive\Escritorio\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Estaciones\Edit.cshtml.g.cs
+C:\Users\braya\OneDrive\Escritorio\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Rutas\Edit.cshtml.g.cs
+C:\Users\braya\OneDrive\Escritorio\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Estaciones\Details.cshtml.g.cs
+C:\Users\braya\OneDrive\Escritorio\ProyectoCiclo3.App\ProyectoCiclo3.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Rutas\Details.cshtml.g.cs
